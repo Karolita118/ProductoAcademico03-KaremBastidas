@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Mejora Académico - Betty Karem Bastidas Barra</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%);
+            padding: 40px 20px;
+            color: #4a1a2c;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.2em;
+            color: #880e4f;
+            margin-bottom: 10px;
+        }
+
+        .subtitulo-principal {
+            text-align: center;
+            font-size: 1.1em;
+            color: #ad1457;
+            margin-bottom: 50px;
+            font-style: italic;
+        }
+
+        .contenedor {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .diapositiva {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 40px 45px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 30px rgba(136, 14, 79, 0.15);
+            border-left: 8px solid #ec407a;
+            position: relative;
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .diapositiva:nth-child(1) { animation-delay: 0.1s; }
+        .diapositiva:nth-child(2) { animation-delay: 0.2s; }
+        .diapositiva:nth-child(3) { animation-delay: 0.3s; }
+        .diapositiva:nth-child(4) { animation-delay: 0.4s; }
+        .diapositiva:nth-child(5) { animation-delay: 0.5s; }
+        .diapositiva:nth-child(6) { animation-delay: 0.6s; }
+        .diapositiva:nth-child(7) { animation-delay: 0.7s; }
+        .diapositiva:nth-child(8) { animation-delay: 0.8s; }
+        .diapositiva:nth-child(9) { animation-delay: 0.9s; }
+        .diapositiva:nth-child(10) { animation-delay: 1.0s; }
+        .diapositiva:nth-child(11) { animation-delay: 1.1s; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .numero {
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            background: #ec407a;
+            color: #ffffff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1em;
+            box-shadow: 0 4px 12px rgba(236, 64, 122, 0.4);
+        }
+
+        .titulo-diap {
+            font-size: 1.6em;
+            color: #880e4f;
+            margin-bottom: 20px;
+            font-weight: 700;
+            border-bottom: 3px solid #f8bbd0;
+            padding-bottom: 10px;
+        }
+
+        .subtitulo-diap {
+            font-size: 1.1em;
+            color: #ad1457;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1em;
+            line-height: 1.7;
+            color: #4a1a2c;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            font-size: 1em;
+            line-height: 1.8;
+            color: #4a1a2c;
+            margin-bottom: 8px;
+        }
+
+        .icono {
+            font-size: 1.3em;
+            margin-right: 8px;
+        }
+
+        .caja-destacada {
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-left: 5px solid #ec407a;
+        }
+
+        .caja-destacada p {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .frase-fuerte {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #880e4f;
+            text-align: center;
+            font-style: italic;
+            padding: 20px;
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .flujo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .paso {
+            background: #ec407a;
+            color: #ffffff;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9em;
+            box-shadow: 0 3px 10px rgba(236, 64, 122, 0.3);
+        }
+
+        .flecha {
+            font-size: 1.5em;
+            color: #ec407a;
+            align-self: center;
+        }
+
+        .tabla {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(136, 14, 79, 0.1);
+        }
+
+        .tabla th {
+            background: #ec407a;
+            color: #ffffff;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .tabla td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f8bbd0;
+            background: #ffffff;
+        }
+
+        .tabla tr:nth-child(even) td {
+            background: #fce4ec;
+        }
+
+        .tabla tr:last-child td {
+            border-bottom: none;
+        }
+
+        .check {
+            color: #2e7d32;
+            font-weight: 700;
+        }
+
+        .feedback-item {
+            background: #fce4ec;
+            border-radius: 10px;
+            padding: 18px 22px;
+            margin-bottom: 18px;
+            border-left: 5px solid #ec407a;
+        }
+
+        .feedback-item strong {
+            color: #880e4f;
+        }
+
+        .feedback-item .comentario {
+            font-style: italic;
+            color: #6a1b3a;
+            background: #ffffff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 8px 0;
+        }
+
+        .feedback-item .cambio {
+            color: #2e7d32;
+            font-weight: 600;
+        }
+
+        .referencias {
+            background: #fce4ec;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-top: 20px;
+        }
+
+        .referencias p {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .referencias a {
+            color: #ad1457;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .referencias a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #ad1457;
+            font-weight: 500;
+        }
+
+        .portada {
+            text-align: center;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #ffffff 0%, #fce4ec 100%);
+            border: 3px solid #ec407a;
+        }
+
+        .portada h1 {
+            font-size: 2.5em;
+            color: #880e4f;
+            margin-bottom: 15px;
+        }
+
+        .portada .subtitulo {
+            font-size: 1.2em;
+            color: #ad1457;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .portada .datos {
+            font-size: 1em;
+            color: #4a1a2c;
+            line-height: 2;
+        }
+
+        .portada .datos strong {
+            color: #880e4f;
+        }
+
+        .prototipo-flujo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            margin: 20px 0;
+        }
+
+        .prototipo-paso {
+            background: linear-gradient(135deg, #ec407a 0%, #f06292 100%);
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.95em;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(236, 64, 122, 0.3);
+        }
+
+        .prototipo-flecha {
+            font-size: 1.5em;
+            color: #ec407a;
+        }
+
+        @media (max-width: 768px) {
+            .diapositiva {
+                padding: 25px 20px;
+            }
+
+            .titulo-diap {
+                font-size: 1.3em;
+            }
+
+            .portada h1 {
+                font-size: 1.8em;
+            }
+
+            .flujo {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .flecha {
+                transform: rotate(90deg);
+            }
+        }
+
+        @media print {
+            body {
+                background: #fff;
+                padding: 10px;
+            }
+
+            .diapositiva {
+                opacity: 1;
+                animation: none;
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #f8bbd0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <!-- DIAPOSITIVA 1: PORTADA -->
+        <div class="diapositiva portada">
+            <div class="numero">1</div>
+            <h1>Diseñando mi plan de mejora académico</h1>
+            <p class="subtitulo">De la planificación a la acción: fortaleciendo mi liderazgo personal</p>
+            <div class="datos">
+                <strong>Betty Karem Bastidas Barra</strong><br>
+                Laboratorio de Liderazgo e Innovación<br>
+                Producto Académico N.° 3<br>
+                2026
+            </div>
+        </div>
+
+        <!-- DIAPOSITIVA 2: MI ESCENARIO ACTUAL -->
+        <div class="diapositiva">
+            <div class="numero">2</div>
+            <div class="titulo-diap">Mi escenario actual</div>
+            <div class="subtitulo-diap">¿Desde dónde parto?</div>
+            <p>Actualmente debo equilibrar mis responsabilidades académicas con otras actividades diarias. Por ello, gran parte de mi tiempo de estudio se concentra en las noches y los fines de semana.</p>
+            <p>Esta situación me ha permitido reconocer que no basta con tener un horario, sino que necesito aprender a utilizar de manera estratégica el tiempo y la energía disponibles.</p>
+            <div class="caja-destacada">
+                <p><span class="icono">🎯</span> <strong>Mi reto:</strong> Pasar de "tener actividades planificadas" a "ejecutarlas de manera constante y oportuna".</p>
+            </div>
+            <div class="flujo">
+                <span class="paso">Responsabilidades</span>
+                <span class="flecha">→</span>
+                <span class="paso">Cansancio</span>
+                <span class="flecha">→</span>
+                <span class="paso">Poco tiempo</span>
+                <span class="flecha">→</span>
+                <span class="paso">Procrastinación</span>
+                <span class="flecha">→</span>
+                <span class="paso">Presión académica</span>
+            </div>
+        </div>
+
+        <!-- DIAPOSITIVA 3: MI DESAFÍO ACADÉMICO -->
+        <div class="diapositiva">
+            <div class="numero">3</div>
+            <div class="titulo-diap">🎯 Mi principal desafío académico</div>
+            <div class="subtitulo-diap">Reducir la procrastinación y mejorar mi gestión del tiempo para aumentar mis horas efectivas de estudio.</div>
+            <p>Mi principal dificultad aparece especialmente al momento de iniciar actividades que considero difíciles, extensas o poco motivadoras.</p>
+            <p>Cuando postergo el inicio, el tiempo disponible disminuye y aumenta la presión por terminar la actividad.</p>
+            <div class="caja-destacada">
+                <p><strong>Análisis crítico</strong></p>
+                <p>No considero que mi principal problema sea únicamente la falta de tiempo.</p>
+                <p>Mi desafío consiste en gestionar mejor el tiempo disponible, controlar las distracciones y comenzar las tareas aunque inicialmente no tenga motivación.</p>
+            </div>
+        </div>
+
+        <!-- DIAPOSITIVA 4: IMPACTO EN MI DESEMPEÑO -->
+        <div class="diapositiva">
+            <div class="numero">4</div>
+            <div class="titulo-diap">¿Cómo impacta en mi desempeño?</div>
+            <p><strong>El problema genera un efecto en cadena:</strong></p>
+            <div class="flujo">
+                <span class="paso">Postergar el inicio</span>
+                <span class="flecha">→</span>
+                <span class="paso">Menos tiempo efectivo</span>
+                <span class="flecha">→</span>
+                <span class="paso">Acumulación</span>
+                <span class="flecha">→</span>
+                <span class="paso">Mayor presión</span>
+                <span class="flecha">→</span>
+                <span class="paso">Menos revisión</span>
+            </div>
+            <div class="caja-destacada">
+                <p><strong>Impacto principal:</strong></p>
+                <ul>
+                    <li>Disminuye mi tiempo efectivo de estudio.</li>
+                    <li>Dificulta mantener una rutina constante.</li>
+                    <li>Aumenta la presión cuando se acercan las fechas de entrega.</li>
+                    <li>Reduce el tiempo disponible para revisar mis trabajos.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- DIAPOSITIVA 5: EVIDENCIAS -->
+        <div class="diapositiva">
+            <div class="numero">5</div>
+            <div class="titulo-diap">🔎 Evidencias de mi desafío</div>
+            <div class="caja-destacada">
+                <p><strong>Evidencia 1 — Tiempo disponible</strong></p>
+                <p>Mi tiempo académico está concentrado principalmente en las noches y fines de semana, por lo que cualquier retraso afecta directamente el cumplimiento de mis actividades.</p>
+            </div>
+            <div class="caja-destacada">
+                <p><strong>Evidencia 2 — Distracciones</strong></p>
+                <p>Cuando comienzo a estudiar, el celular puede convertirse en una fuente de interrupciones mediante mensajes, redes sociales y otras notificaciones.</p>
+            </div>
+            <div class="caja-destacada">
+                <p><strong>Evidencia 3 — Inicio tardío</strong></p>
+                <p>Las actividades que percibo como difíciles pueden ser postergadas hasta tener una fecha de entrega cercana.</p>
+            </div>
+            <div class="frase-fuerte">
+                Indicador que voy a mejorar: Horas efectivas de estudio semanal.<br>
+                <span style="font-size: 0.9em;">Situación inicial: 6 horas efectivas/semana → Meta: 10 horas efectivas/semana durante 3 semanas.</span>
+            </div>
+        </div>
+
+        <!-- DIAPOSITIVA 6: MIS DOS ACCIONES DE MEJORA -->
+        <div class="diapositiva">
+            <div class="numero">6</div>
+            <div class="titulo-diap">🚀 Mis dos acciones de mejora</div>
+            <div class="caja-destacada">
+                <p><strong>Acción 1: Planificación semanal estratégica</strong></p>
+                <p>Cada domingo dedicaré 20 minutos a revisar mis actividades académicas.</p>
+                <p>Las clasificaré según:</p>
+                <ul>
+                    <li>Fecha de entrega</li>
+                    <li>Dificultad</li>
+                    <li>Importancia</li>
+                    <li>Tiempo necesario</li>
+                </ul>
+                <p>Después distribuiré las actividades durante la semana.</p>
+                <p><strong>Objetivo:</strong> Evitar acumular tareas y comenzar con anticipación.</p>
+            </div>
+            <div class="caja-destacada">
+                <p><strong>⏱️ Acción 2: Bloques de estudio sin distracciones</strong></p>
+                <p>Realizaré bloques de concentración utilizando Focus To-Do o Forest, con el celular en modo concentración.</p>
+                <p><strong>Meta:</strong> Pasar de 6 → 10 horas efectivas de estudio semanal durante 3 semanas.</p>
+            </div>
+        </div>
+
+        <!-- DIAPOSITIVA 7: CRONOGRAMA -->
+        <div class="diapositiva">
+            <div class="numero">7</div>
+            <div class="titulo-diap">📅 Plan de implementación — 3 semanas</div>
+            <table class="tabla">
+                <tr>
+                    <th>Actividad</th>
+                    <th>Semana 1</th>
+                    <th>Semana 2</th>
+                    <th>Semana 3</th>
+                </tr>
+                <tr>
+                    <td>Planificación semanal</td>
+                    <td class="check">✅</td>
+                    <td class="check">✅</td>
+                    <td class="check">✅</td>
+                </tr>
+                <tr>
+                    <td>Bloques de concentración</td>
+                    <td class="check">✅</td>
+                    <td class="check">✅</td>
+                    <td class="check">✅</td>
+                </tr>
+                <tr>
+                    <td>Reducir uso del celular</td>
+                    <td class="check">✅</td>
+                    <td class="check">✅</td>
+                    <td class="check">✅</td>
+                </tr>
+                <tr>
+                    <td>Registrar horas efectivas</td>
+                    <td class="check">✅</td>
+                    <td class="check">✅</td>
+                    <td class="check">✅</td>
+                </tr>
+                <tr>
+                    <td>Revisar avances</td>
+                    <td class="check">✅</td>
+                    <td class="check">✅</td>
+                    <td class="check">✅</td>
+                </tr>
+                <tr>
+                    <td>Ajustar estrategia</td>
+                    <td class="check">✅</td>
+                    <td class="check">✅</td>
+                    <td class="check">✅</td>
+                </tr>
+            </table>
+            <div class="caja-destacada">
+                <p><strong>Indicador:</strong> Meta: 10 horas efectivas de estudio por semana.</p>
+                <p>Al finalizar cada semana compararé: Horas planificadas vs. horas realizadas.</p>
+            </div>
+        </div>
+
+        <!-- DIAPOSITIVA 8: PROTOTIPO -->
+        <div class="diapositiva">
+            <div class="numero">8</div>
+            <div class="titulo-diap">🧩 Mi prototipo: "Semana Académica Efectiva"</div>
+            <div class="prototipo-flujo">
+                <div class="prototipo-paso">📋 DOMINGO: Planificar → Priorizar → Distribuir</div>
+                <div class="prototipo-flecha">⬇️</div>
+                <div class="prototipo-paso">📚 LUNES A VIERNES: Estudiar → Bloque de concentración → Celular en modo concentración → Registrar avance</div>
+                <div class="prototipo-flecha">⬇️</div>
+                <div class="prototipo-paso">🎯 FIN DE SEMANA: Actividades difíciles → Revisar trabajos → Corregir errores</div>
+                <div class="prototipo-flecha">⬇️</div>
+                <div class="prototipo-paso">🔄 DOMINGO: Evaluar resultados → Ajustar el plan → Nueva semana</div>
+            </div>
+            <div class="caja-destacada">
+                <p><strong>Herramientas:</strong></p>
+                <p>📅 Google Calendar | ⏱️ Focus To-Do / Forest | 📝 Agenda | ☁️ Google Drive</p>
+            </div>
+        </div>
+
+        <!-- DIAPOSITIVA 9: FEEDBACK Y AJUSTES -->
+        <div class="diapositiva">
+            <div class="numero">9</div>
+            <div class="titulo-diap">💬 Feedback y ajustes</div>
+
+            <div class="feedback-item">
+                <p><strong>👩 Feedback 1 — Equipo de soporte</strong></p>
+                <p class="comentario">"Tu planificación debe considerar descansos para evitar que el cansancio haga que abandones el horario."</p>
+                <p class="cambio">✅ Cambio realizado: Incorporé pausas entre los bloques de estudio y evité programar sesiones excesivamente largas.</p>
+            </div>
+
+            <div class="feedback-item">
+                <p><strong>👩‍🎓 Feedback 2 — Compañera de clase</strong></p>
+                <p class="comentario">"Sería mejor comenzar las actividades difíciles antes de la fecha límite y no dejarlas para el final."</p>
+                <p class="cambio">✅ Cambio realizado: Ahora las actividades de mayor dificultad se programan durante el fin de semana y se dividen en partes pequeñas.</p>
+            </div>
+
+            <div class="feedback-item">
+                <p><strong>👤 Feedback 3 — Persona de confianza</strong></p>
+                <p class="comentario">"Si el celular te distrae, debes establecer un momento específico para revisarlo y no hacerlo durante el estudio."</p>
+                <p class="cambio">✅ Cambio realizado: Incorporé el modo concentración y dejé la revisión de mensajes para los descansos.</p>
+            </div>
+
+            <div class="frase-fuerte">
+                Feedback → modificación → mejora del prototipo
+            </div>
+        </div>
+
+        <!-- DIAPOSITIVA 10: REFLEXIÓN -->
+        <div class="diapositiva">
+            <div class="numero">10</div>
+            <div class="titulo-diap">💭 Reflexión y liderazgo personal</div>
+            <div class="subtitulo-diap">¿Qué aprendí al transformar mi plan en un prototipo?</div>
+            <p>Aprendí que planificar no significa simplemente llenar una agenda con actividades. Un plan realmente útil debe considerar mi tiempo disponible, mi nivel de energía, las dificultades de cada actividad y las posibles distracciones.</p>
+            <p>Al transformar mi plan semanal en un prototipo, pude convertir una intención general como "quiero estudiar más" en acciones concretas que puedo realizar, medir y ajustar.</p>
+            <p>También comprendí que un prototipo no tiene que ser perfecto desde el inicio. Puede modificarse a partir de los resultados y del feedback recibido.</p>
+            <div class="subtitulo-diap">👑 ¿Cómo fortalece mi liderazgo personal?</div>
+            <p>Este proceso fortalece mi liderazgo personal porque me permite tomar responsabilidad sobre mis decisiones, organizar mis prioridades y evaluar mis propios resultados.</p>
+            <div class="frase-fuerte">
+                "Para mí, liderarme significa aprender a dirigir mis acciones incluso cuando no tengo motivación, mantener mis compromisos y realizar ajustes cuando una estrategia no funciona."
+            </div>
+        </div>
+
+        <!-- DIAPOSITIVA 11: CONCLUSIÓN Y REFERENCIAS -->
+        <div class="diapositiva">
+            <div class="numero">11</div>
+            <div class="titulo-diap">🌱 Conclusión y compromiso personal</div>
+            <p>Mi desafío académico no se solucionará solamente haciendo un horario. Necesito desarrollar un sistema que me permita:</p>
+            <div class="flujo">
+                <span class="paso">PLANIFICAR</span>
+                <span class="flecha">→</span>
+                <span class="paso">ACTUAR</span>
+                <span class="flecha">→</span>
+                <span class="paso">MEDIR</span>
+                <span class="flecha">→</span>
+                <span class="paso">APRENDER</span>
+                <span class="flecha">→</span>
+                <span class="paso">AJUSTAR</span>
+            </div>
+            <p>Durante las próximas tres semanas me comprometo a trabajar para aumentar mis horas efectivas de estudio de 6 a 10 horas semanales, reducir las distracciones y evaluar semanalmente mis avances.</p>
+            <div class="frase-fuerte">
+                "Mi liderazgo personal comienza cuando dejo de esperar el momento perfecto para actuar y empiezo a tomar decisiones conscientes sobre mi tiempo y mis prioridades."
+            </div>
+            <div class="referencias">
+                <p><strong>📚 Referencias:</strong></p>
+                <p>Calisto, J. D. (2019, mayo 24). <em>¿Qué me ha dado el voluntariado?</em> Medium. <a href="https://medium.com/@jcalisto" target="_blank">https://medium.com/@jcalisto</a></p>
+                <p>CGMeetup. (2018). <em>CGI Animated Short Film: "Mr Indifferent" by Aryasb Feiz</em> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=7d0jXw7b5uE" target="_blank">https://www.youtube.com/watch?v=7d0jXw7b5uE</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="footer">Elaborado para el Producto Académico 3 — Laboratorio de Liderazgo e Innovación — Universidad Continental</p>
+
+</body>
+</html>
